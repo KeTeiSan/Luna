@@ -5,7 +5,7 @@ const token = process.env.token;
 const prefix = ("/")
 
 bot.on('ready', function () {
-    console.log("Je suis prêt à être utilisé.")
+    console.log("Je suis prêt.")
     bot.user.setActivity('/help - v1.0.0').catch(console.error)
 });
 
