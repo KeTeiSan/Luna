@@ -78,6 +78,19 @@ bot.on('message', message => {
         .setFooter("© Luna | Argonia.fr")
         message.channel.send(mod_embed);
     }
+    
+    if(message.content === prefix + "infos") {
+        var infos_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle("Informations :")
+        .addField("Etat du serveur :", "En développement")
+        .addField("Twitter :", "https://twitter.com/ArgoniaMC")
+        .addField("Site :", "argonia.net")
+        .addField("Forum :", "community.argonia.net")
+        .addField("Teamspeak :", "ts.argonia.net")
+        .setFooter("© Luna | Argonia.fr")
+        message.channel.send(infos_embed);
+    }
 
     if(message.content.startsWith(prefix + "kick")){
         if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send("Vous n'avez pas la permission!");
