@@ -11,7 +11,7 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le discord officiel de Argonia.' + member.displayName)
+        return channel.send('Bienvenue sur le discord officiel de Argonia.')
         console.log('${member.displayName} à rejoind le discord')
     }).catch(console.error)
 });
@@ -28,7 +28,7 @@ bot.on('message', message => {
         .addField("/version", "Affiche la version du bot.")
         .addField("/mod", "Affiche les commandes de modération.")
         .addField("/stats", "Affiche t'es statistiques.")
-        .setFooter("© Luna | Argonia.fr")
+        .setFooter("© Luna | Argonia.net")
         message.channel.send(help_embed);
     }
 
@@ -39,7 +39,7 @@ bot.on('message', message => {
         .addField("Version du bot :", "1.0.0")
         .addField("Auteur :", "KeTeiSan")
         .addField("Github :", "https://github.com/KeTeiSan/Luna")
-        .setFooter("© Luna | Argonia.fr")
+        .setFooter("© Luna | Argonia.net")
         message.channel.send(version_embed);
     }
 
@@ -59,6 +59,7 @@ bot.on('message', message => {
         .setTitle("Statistiques :")
         .addField("ID :", msgauthor, true)
         .addField("Date d'inscription :", userCreateDate[1] + " " + userCreateDate[2] + " " + userCreateDate[3])
+        .setFooter("© Luna | Argonia.net")
         .setThumbnail(message.author.avatarURL)
         message.reply("Tu peux regarder tes messages privés !")
         message.author.send(stats_embed);
@@ -75,7 +76,7 @@ bot.on('message', message => {
         .addField("/mute <@user>", "Mute l'utilisateur mentionné.")
         .addField("/unmute <@user>", "Unmute l'utilisateur mentionné.")
         .addField("/clear <nombre>", "Supprime le nombre de messages indiqué.")
-        .setFooter("© Luna | Argonia.fr")
+        .setFooter("© Luna | Argonia.net")
         message.channel.send(mod_embed);
     }
     
@@ -88,7 +89,7 @@ bot.on('message', message => {
         .addField("Site :", "argonia.net")
         .addField("Forum :", "community.argonia.net")
         .addField("Teamspeak :", "ts.argonia.net")
-        .setFooter("© Luna | Argonia.fr")
+        .setFooter("© Luna | Argonia.net")
         message.channel.send(infos_embed);
     }
 
