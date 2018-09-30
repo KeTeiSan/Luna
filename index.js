@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cfg = require('./index.json');
+const token = process.env.token;
 const prefix = ("/")
 
 bot.on('ready', function () {
@@ -15,7 +16,7 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
 });
 
-bot.login(cfg.token);
+bot.login(token);
 
 bot.on('message', message => { 
 
